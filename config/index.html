@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="/assets/vendors/require.js"></script>
+</head>
+<body>
+<div>12312321312321</div>
+	<script>
+		requirejs.config({
+			baseUrl: './',
+			paths: {
+				'a': 'module/module_a',
+				'b': 'module/module_b',
+				'person': 'tools/person',
+				'jq': '../assets/vendors/jquery-1.12.4',
+			},
+			shim: {
+				'person': {
+					'exports': 'p',
+					'deps': ['jq'],
+				}
+			}
+		})
+
+
+		require(['a', 'b', 'person'], function (args1, args2, args3) {
+			console.log(args1);
+			console.log(args2);
+			args3.name = 'zs';
+			args3.age = 22;
+			args3.sayhi();
+		})
+	</script>
+</body>
+</html>

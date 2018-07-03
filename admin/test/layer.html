@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="/assets/vendors/jquery-1.12.4.js"></script>
+	<script src="/assets/vendors/layer/layer.js"></script>
+</head>
+<body>
+	<div id="layer">asdfasdfasdf</div>
+<script>
+	//页面一打开就执行，放入ready是为了layer所需配件（css、扩展模块）加载完毕
+	// layer.ready(function(){ 
+	//   layer.open({
+	//     type: 1,
+	//     title: '欢迎页',
+	//     time: '3000',
+	//     maxmin: true,
+	//     area: ['800px', '500px'],
+	//     content: $('#layer'),
+	//     end: function(){
+	//       layer.tips('Hi', '#about', {tips: 1})
+	//     }
+	//   });
+	//  });
+	// layer.alert('你好');
+	// layer.confirm('确定要删除么');
+	// layer.prompt({
+	// 	// formtype: 2,
+	// 	value: 'cao',
+	// 	title: 'nimei',
+	// 	offset: ['auto']
+	// }, function () {})
+	console.log(this.parent);
+</script>
+</body>
+</html>
